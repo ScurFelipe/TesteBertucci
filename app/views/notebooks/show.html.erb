@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @notebook %>
+
+<div class = "buttons-notebook-show">
+  <%= link_to "Editar este notebook", edit_notebook_path(@notebook), class: "btn-edit-notebook" %> 
+  <%= link_to "Voltar para notebooks", notebooks_path, class: "btn-back-notebooks" %>
+
+  <%= button_to "Excluir esse notebool", class: "btn-destroy-notebook", @notebook, method: :delete %>
+</div>

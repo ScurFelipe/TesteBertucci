@@ -1,0 +1,16 @@
+<section id = "register_notebooks">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Notebooks</h1>
+
+  <div id="notebooks">
+    <% @notebooks.each do |notebook| %>
+      <%= render notebook %>
+      <p>
+        <%= link_to "Ver", notebook %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "Novo notebook", new_notebook_path, class: "btn-new-notebook" %>
+</section>
